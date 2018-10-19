@@ -1,0 +1,3 @@
+/home/hualong/Airsim_uav_wrapper/airsimlib_2.0/CMakeFiles/rebuild_cache.dir
+/home/hualong/Airsim_uav_wrapper/airsimlib_2.0/CMakeFiles/edit_cache.dir
+/home/hualong/Airsim_uav_wrapper/airsimlib_2.0/CMakeFiles/AirLib.dir

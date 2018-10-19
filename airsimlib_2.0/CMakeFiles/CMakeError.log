@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/hualong/Airsim_uav_wrapper/airsimlib_2.0/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1180c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1180c.dir/build.make CMakeFiles/cmTC_1180c.dir/build
+make[1]: Entering directory '/home/hualong/Airsim_uav_wrapper/airsimlib_2.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1180c.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_1180c.dir/CheckSymbolExists.c.o   -c /home/hualong/Airsim_uav_wrapper/airsimlib_2.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_1180c
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1180c.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_1180c.dir/CheckSymbolExists.c.o  -o cmTC_1180c 
+CMakeFiles/cmTC_1180c.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_1180c.dir/build.make:86: recipe for target 'cmTC_1180c' failed
+make[1]: *** [cmTC_1180c] Error 1
+make[1]: Leaving directory '/home/hualong/Airsim_uav_wrapper/airsimlib_2.0/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_1180c/fast' failed
+make: *** [cmTC_1180c/fast] Error 2
+
+File /home/hualong/Airsim_uav_wrapper/airsimlib_2.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/hualong/Airsim_uav_wrapper/airsimlib_2.0/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f6540/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f6540.dir/build.make CMakeFiles/cmTC_f6540.dir/build
+make[1]: Entering directory '/home/hualong/Airsim_uav_wrapper/airsimlib_2.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f6540.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_f6540.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f6540
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f6540.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_f6540.dir/CheckFunctionExists.c.o  -o cmTC_f6540 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f6540.dir/build.make:86: recipe for target 'cmTC_f6540' failed
+make[1]: *** [cmTC_f6540] Error 1
+make[1]: Leaving directory '/home/hualong/Airsim_uav_wrapper/airsimlib_2.0/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f6540/fast' failed
+make: *** [cmTC_f6540/fast] Error 2
+
+
